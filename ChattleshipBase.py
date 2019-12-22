@@ -55,6 +55,10 @@ class Base:
         return tmp == "YOU WIN"
         
 if __name__ == "__main__":
+    if input("(G)UI or (C)LI? ").lower().startswith("g"):
+        from ChattleshipGUI import GUI as interface
+    else:
+        interface = CLI
     inst = Base(
         [
             (lambda: input("CHAT IN: ")),
